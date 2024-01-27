@@ -6,9 +6,14 @@ import trafilatura
 dotenv.load_dotenv()
 import json
 
+# flask cors  
+from flask_cors import CORS
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key = gemini_api_key)
 app = Flask(__name__)
+
+CORS(app)
+allowed_origins = ["*"]
 
 @app.route('/')
 def hello_world():
@@ -58,8 +63,9 @@ this  is the tearm and condition :
     return response.text
 
 @app.route('/getAnalysis', methods=['POST'])
-def test():
+def getAnalysis():
     # terms_link = request.json['terms-url']
+    print(1)
     privacy_link = request.json['privacy_url']
     print(privacy_link)
     urls = [ privacy_link]
@@ -69,7 +75,43 @@ def test():
 
     return jsonify({'response': response})
 
+@app.route('/test1', methods=['POST'])
+def test():
+    data = {
+  "response": {
+    "termsAndConditions": [
+      {
+        "brief": "OpenAI collects various types of personal information including name, contact information, IP address, device identifiers, account credentials, payment card information, transaction history, Content, Social Information, and Technical Information.",
+        "concernRating": 3,
+        "point": "Personal Information Collection"
+      },
+      {
+        "brief": "OpenAI uses personal information for various purposes, including providing, maintaining, and improving the Services, research, communication, developing new programs and services, fraud prevention, protection against legal liability, and compliance with legal obligations.",
+        "concernRating": 3,
+        "point": "Use of Personal Information"
+      },
+      {
+        "brief": "OpenAI may disclose personal information to vendors, service providers, business affiliates, government authorities, industry peers, or other third parties for legal reasons, fraud prevention, or other legitimate business purposes.",
+        "concernRating": 2,
+        "point": "Disclosure of Personal Information"
+      },
+      {
+        "brief": "Users may have certain rights, such as accessing, updating, or deleting their personal information, depending on their location and applicable laws. OpenAI provides options for exercising these rights through their account or by contacting privacy.openai.com.",
+        "concernRating": 2,
+        "point": "User Rights and Access"
+      },
+      {
+        "brief": "OpenAI implements security measures to protect personal information from unauthorized access or disclosure. However, no internet transmission is completely secure, and OpenAI is not responsible for circumventing security measures.",
+        "concernRating": 2,
+        "point": "Data Security and Retention"
+      }
+    ]
+  }
+}
 
+
+
+    return jsonify({'response': data})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
