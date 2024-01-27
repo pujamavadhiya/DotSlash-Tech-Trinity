@@ -8,7 +8,7 @@ def hello_world():
 
 @app.route('/test', methods=['POST'])
 def test():
-    link = request.form['link']
+    link = request.json['link']
     return jsonify({'msg': "success"})
 
 if __name__ == '__main__':
