@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Points Viewer",
+    "version": "1.0",
+    "description": "A simple Chrome extension to display points",
+    "action": {
+      "default_icon": {
+        
+      },
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  
