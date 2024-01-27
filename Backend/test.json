@@ -1,0 +1,14 @@
+{
+    "termsAndConditions": [
+      {
+        "point": "Minimum Age Requirement",
+        "concernRating": 2,
+        "brief": "Users must be at least 13 years old or meet the minimum age requirement in their country to use the Services. Users under 18 require parental or legal guardian permission."
+      },
+      {
+        "point": "Registration and Access",
+        "concernRating": 3,
+        "brief": "Users must provide accurate and complete information for account registration. Sharing account credentials or using the Services on behalf of others requires proper authorization."
+      }
+    ]
+  }
