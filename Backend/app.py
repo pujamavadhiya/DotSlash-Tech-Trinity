@@ -60,7 +60,7 @@ this  is the tearm and condition :
 @app.route('/getAnalysis', methods=['POST'])
 def test():
     # terms_link = request.json['terms-url']
-    privacy_link = request.json['privacy-url']
+    privacy_link = request.json['privacy_url']
     print(privacy_link)
     urls = [ privacy_link]
     response = genAiQuestion(urls)
