@@ -1,0 +1,19 @@
+body {
+    width: 200px;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #points-container {
+    text-align: center;
+    
+  }
+  
+  #points-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #points-list li {
+    margin-bottom: 5px;
+  }
