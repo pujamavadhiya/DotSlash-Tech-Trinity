@@ -20,17 +20,17 @@ document.addEventListener('DOMContentLoaded', async function () {
 
                 try {
                     // make the post request to the backend and send the privacy policy link
-                    const backendResponse = await fetch('http://127.0.0.1:5000/test1', {
+                    const backendResponse = await fetch('http://127.0.0.1:5000/getAnalysis', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                         },
                         body: JSON.stringify({ privacy_url: privacyPolicy.href }),
                     });
-                    alert(backendResponse);
+                    // alert(backendResponse);
                     const data = await backendResponse.json();
                     console.log(data);
-                    alert(data);
+                    // alert(data);
                     return data;
                 } catch (error) {
                     console.log(error);
@@ -53,16 +53,28 @@ document.addEventListener('DOMContentLoaded', async function () {
         document.querySelector('.loader').style.display = 'none';
         
 
-        if (hasTermsAndConditions && hasTermsAndConditions.response && hasTermsAndConditions.response.response && hasTermsAndConditions.response.response.termsAndConditions) {
-            document.getElementById('points-container').innerHTML = '<h2>Terms And Conditions Found</h2><ul id="points-list"></ul>';
+        if (hasTermsAndConditions && hasTermsAndConditions.response && hasTermsAndConditions.response.privacyPolicy) {
+            document.getElementById('points-container').innerHTML = '<h1>Terms And Conditions Found</h1><ul id="points-list"></ul>';
 
             document.getElementById('points-list').innerHTML = '';
 
            
             
-            for (const point of hasTermsAndConditions.response.response.termsAndConditions) {
+            for (const point of hasTermsAndConditions.response.privacyPolicy) {
                 const li = document.createElement('li');
-                li.innerText = point.point
+                // display the point in bold
+                const b = document.createElement('b');
+                b.innerText = point.point;
+                li.appendChild(document.createElement('br'));
+                li.appendChild(document.createElement('br'));
+                li.appendChild(b);
+                li.appendChild(document.createElement('br'));
+
+                // display the point.brif
+                const p = document.createElement('p');
+                p.innerText = point.brief;
+                li.appendChild(p);
+
                 document.getElementById('points-list').appendChild(li);
                                
             }
