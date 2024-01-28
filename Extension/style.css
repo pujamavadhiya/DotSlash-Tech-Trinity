@@ -22,12 +22,14 @@ body {
     margin-bottom: 5px;
   }
 .loader {
-  border: 16px solid #f3f3f3;
+  align-items: center;
+  border: 5px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid black;
-  border-bottom: 16px solid black;
-  width: 120px;
-  height: 120px;
+  margin-left: 100px;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  width: 10px;
+  height: 10px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
