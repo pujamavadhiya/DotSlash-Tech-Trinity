@@ -39,7 +39,7 @@ this  is the tearm and condition :
 
     text += '''```
     Provide the JSON format containing the top highlighted point (most critical in the context of the users) (atleast 5 or more) along with its concern rating on a scale of 1-3, where 3 signifies the most concerning point and 1 is the least concern. Additionally, offer a brief description of that point.
-
+    (Try to Give it in the descending order of concern rating)
 (JSON format example:
     {
     "privacyPolicy": [
@@ -78,7 +78,6 @@ def getAnalysis():
 @app.route('/test1', methods=['POST'])
 def test():
     data = {
-  "response": {
     "termsAndConditions": [
       {
         "brief": "OpenAI collects various types of personal information including name, contact information, IP address, device identifiers, account credentials, payment card information, transaction history, Content, Social Information, and Technical Information.",
@@ -107,7 +106,6 @@ def test():
       }
     ]
   }
-}
 
 
 
