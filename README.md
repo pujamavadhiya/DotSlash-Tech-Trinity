@@ -32,23 +32,6 @@ Terms Analysis: The extension meticulously analyzes the terms and conditions of 
 **Privacy and Security Awareness:** The overarching goal is to promote digital literacy and awareness of privacy and security issues, empowering users to make informed decisions about sharing their data online.
 
 In essence, the extension serves as a guardian, actively engaging users in the process of understanding and navigating the complexities of website terms and conditions, ultimately fostering a culture of transparency, informed decision-making, and user empowerment in the online realm.
-## Challenges We Ran Into 💀
 
-
-**GitHub Conflit:** 
-While working on our project, we split into teams to handle different parts at the same time. When we tried to put everything together, we had issues because we forgot to update with the latest changes, causing conflicts. To fix it, we quickly cleaned up the messy parts, removed related folders and files, and made sure our space was tidy. Then, we started fresh, bringing in the latest changes and smoothly adding them to the main project. This way, everyone's work came together without any more problems.
-
-**Fetching the Terms and Conditions::** 
-We're facing challenges in getting data from different websites and sending it to our main system. The tricky part is that each website has its own way of storing terms and conditions. To solve this, we're working on smart solutions to smoothly handle the unique setups of different sites. We're researching and analyzing each site to find where they keep this information. Our goal is to create a flexible method that can adapt to how each website stores its terms and conditions. This way, we ensure that our system can easily and effectively gather this data from various websites without any hiccups.
-
-**Frontend Implementation:**
-After successfully gathering terms and conditions data from different websites, our new challenge is smoothly sending this data to the AI model. Once the AI processes it and gives results, we face the task of displaying this info in a browser extension. The tricky part is, we can only use basic tools like HTML, CSS, and JavaScript, without using modern frameworks like ReactJS. Making the received data look good is also tough. Right now, we're focusing on finding a good way to fit the AI-processed data into the extension using only these basic tools. At the same time, we're trying out creative ways to make it look nice and user-friendly in the extension.
-## 🚀 How we have used Github in our project? 🚀
-
-**Github Pages** we deployed our website at https://github.com/pujamavadhiya/DotSlash-Tech-Trinity using Render and Glitch. It was really simple to deploy our site through Render and we are planning to use this feature in future hackathons.
-
-**Push and Pull** : We used Github for making out task separated and handy for all of us working simiultaneously. 
-
-
-Team Name : Tech-Trinity
-Members: Dev Sapariya,Puja Mavadhiya, Jemmy Dalsaniya
+# Team Name : Tech-Trinity
+# Members: Dev Sapariya,Puja Mavadhiya, Jemmy Dalsaniya
