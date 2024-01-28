@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         try {
             fetchInProgress = true;
 
-            const backendResponse = await fetch('http://127.0.0.1:5000/getAnalysis', {
+            const backendResponse = await fetch('http://192.168.52.33:5000/getAnalysis', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,16 @@ document.addEventListener('DOMContentLoaded', async function () {
                 document.getElementById('points-list').innerHTML = '';
     
                 // inceased the font size of whole page
-                document.body.style.fontSize = '25px';
+                document.body.style.fontSize = '15px';
+                document.getElementById('points-container').style.border = '1px solid #000';
+                document.getElementById('points-container').style.padding = '20px';
+                document.getElementById('points-container').style.backgroundColor = '#f0f0f0';
+                document.getElementById('points-list').style.marginTop = '10px';
+                document.getElementById('points-list').style.border = '1px solid #000';
+
+                var listItemStyle = 'padding: 5px; border-bottom: 1px solid #ccc;';
+
+                
                 for (const point of hasTermsAndConditions.response.privacyPolicy) {
                     const li = document.createElement('li');
                     
@@ -77,10 +86,17 @@ document.addEventListener('DOMContentLoaded', async function () {
                     li.appendChild(document.createElement('br'));
                     li.appendChild(b);
                     li.appendChild(document.createElement('br'));
+                    li.style.paddingLeft='20px';
+                    li.style.paddingRight='20px';
+
                 
                     // Display the point.brief
                     const p = document.createElement('p');
                     p.innerText = point.brief;
+                    p.style.textAlign = 'justify';
+                    p.style.paddingLeft = '20px';
+                    p.style.paddingRight = '20px';
+
                     li.appendChild(p);
                 
                     // Color code based on concernRating
