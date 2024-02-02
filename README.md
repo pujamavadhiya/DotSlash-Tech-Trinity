@@ -35,3 +35,7 @@ In essence, the extension serves as a guardian, actively engaging users in the p
 
 # Team Name : Tech-Trinity
 # Members: Dev Sapariya,Puja Mavadhiya, Jemmy Dalsaniya
+
+![WhatsApp Image 2024-01-28 at 12 24 17_40a0b113](https://github.com/pujamavadhiya/DotSlash-Tech-Trinity/assets/122553122/1f8bec0e-e6a9-4af4-b165-ef1c75ab7508)
+![WhatsApp Image 2024-01-28 at 12 28 22_56553325](https://github.com/pujamavadhiya/DotSlash-Tech-Trinity/assets/122553122/86167e29-f209-4ff2-9d42-3f711d4b165d)
+
